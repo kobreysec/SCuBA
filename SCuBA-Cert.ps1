@@ -108,7 +108,7 @@ $certPem = @(
 
 [System.IO.File]::WriteAllText($certPemPath, $certPem)
 
-Write-Host "Building bundle PEM for Nessus..."
+Write-Host "Building bundle PEM..."
 $bundlePem = $keyPem + [Environment]::NewLine + $certPem + [Environment]::NewLine
 [System.IO.File]::WriteAllText($bundlePemPath, $bundlePem)
 
